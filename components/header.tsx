@@ -2,13 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import Link from "next/link";
-import clsx from "clsx";
-import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
-
+  const handleBlogClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    alert('Em manutenção');
+  }
+  
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -38,12 +39,30 @@ export default function Header() {
                     </motion.span>
               </Link>
             </motion.li>
+
             <motion.li
+          className="relative flex items-center justify-center h-3/4"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}>
+          <a className="flex items-center justify-center w-full px-3 py-3 text-gray-500 transition cursor-pointer hover:text-gray-300"
+            onClick={handleBlogClick}>Blog
+              <motion.span
+                className="absolute inset-0 rounded-full -z-10 "
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}>
+                </motion.span>
+              </a>
+            </motion.li>
+            {/* <motion.li
               className="relative flex items-center justify-center h-3/4"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Link
+              {/* <Link
                 className="flex items-center justify-center w-full px-3 py-3 text-gray-500 transition hover:text-gray-300"
                 href="/blog">Blog
                   <motion.span
@@ -55,8 +74,8 @@ export default function Header() {
                       damping: 30,
                     }}>
                     </motion.span>
-              </Link>
-            </motion.li>
+              </Link> 
+            </motion.li>*/}
         </ul>
       </nav>
     </header>

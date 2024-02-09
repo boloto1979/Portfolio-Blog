@@ -1,7 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { RiCustomerServiceFill } from "react-icons/ri";
-import { SiHackaday } from "react-icons/si";
 import malImg from "@/public/mal.png";
 import senteImg from "@/public/sente.png";
 
@@ -54,10 +51,10 @@ export const skillsData = [
   "PHP",
   "React",
   "Node.js",
+  "Vue.js",
   "Git",
   "Tailwind",
   "MySQL",
-  "PHP",
   "Bash / Shell",
   "PostgreSQL",
   "SQL",
