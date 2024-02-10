@@ -77,7 +77,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
+        {/* <Link
           href="#contact"
           className="flex items-center gap-2 py-3 transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
           onClick={() => {
@@ -87,7 +87,7 @@ export default function Intro() {
         >
           Contact me here{" "}
           <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
-        </Link>
+        </Link> */}
 
         <a
           className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack bg-white/10"
